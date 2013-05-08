@@ -32,11 +32,17 @@ function ofc_contact_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
+        'boxes-mailchimp_sub' => array(
+          'module' => 'boxes',
+          'delta' => 'mailchimp_sub',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
         'boxes-also_on' => array(
           'module' => 'boxes',
           'delta' => 'also_on',
           'region' => 'sidebar_second',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
       ),
     ),
