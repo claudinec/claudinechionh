@@ -33,6 +33,23 @@ function ofc_contact_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'contact_header';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Header for contact page';
+  $box->options = array(
+    'body' => array(
+      'value' => 'If you are inquiring about web development or related services, please use the <a href="/form/web-development-inquiry">Web development inquiry form</a>. Otherwise, you can contact me using the form below.
+',
+      'format' => '1',
+    ),
+    'additional_classes' => '',
+  );
+  $export['contact_header'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'mailchimp_sub';
   $box->plugin_key = 'simple';
   $box->title = 'Newsletter';
