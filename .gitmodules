@@ -1,0 +1,3 @@
+[submodule "sites/all/modules/custom/currently_reading"]
+	path = sites/all/modules/custom/currently_reading
+	url = git@github.com:claudinec/currently_reading.git
