@@ -15,7 +15,7 @@ function ofc_contact_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'contact-blocks';
   $context->description = 'Blocks to display on Contact page';
-  $context->tag = 'contact';
+  $context->tag = 'blocks';
   $context->conditions = array(
     'path' => array(
       'values' => array(
@@ -26,6 +26,12 @@ function ofc_contact_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'boxes-contact_header' => array(
+          'module' => 'boxes',
+          'delta' => 'contact_header',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'boxes-phone' => array(
           'module' => 'boxes',
           'delta' => 'phone',
@@ -36,7 +42,7 @@ function ofc_contact_context_default_contexts() {
           'module' => 'boxes',
           'delta' => 'also_on',
           'region' => 'sidebar_second',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
       ),
     ),
@@ -46,7 +52,7 @@ function ofc_contact_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Blocks to display on Contact page');
-  t('contact');
+  t('blocks');
   $export['contact-blocks'] = $context;
 
   return $export;
