@@ -6,3 +6,8 @@ sites/*/files
 sites/*/private
 sites/*/tmp
 
+# Editors and OS
+.DS_Store
+*.~
+*.swp
+       
