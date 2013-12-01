@@ -1,0 +1,124 @@
+<?php
+/**
+ * @file
+ * This is a Drupal 7 module to display a block of a 'currently
+ * reading' booklist extracted from a social booklist site.
+ *
+ * I see this as particularly useful for personal websites and blogs
+ * so this uses site-wide rather than user-configurable settings.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function currently_reading_menu() {
+  $items['admin/config/services/currently-reading'] = array(
+    'type' => MENU_LOCAL_TASK,
+    'title' => 'Currently Reading',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('currently_reading_config_form'),
+    'access arguments' => array('Administer currently_reading settings'),
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function currently_reading_permission() {
+  return array(
+    'administer currently_reading settings' => array(
+      'title' => t('Administer currently_reading settings')),
+  );
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function currently_reading_block_info() {
+  $blocks['currently_reading'] = array(
+    'info' => 'Currently Reading',
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function currently_reading_block_view($delta = '') {
+  if ($delta == 'currently_reading') {
+    $block['subject'] = t('Currently Reading');
+
+    // Fetch Goodreads currently-reading shelf.
+    $goodreads_apikey = variable_get('goodreads_apikey');
+    $goodreads_userid = variable_get('goodreads_userid');
+    if ($goodreads_apikey != '' and $goodreads_userid != '') {
+      $block['content'] = currently_reading_fetch_goodreads($goodreads_apikey, $goodreads_userid);
+    }
+  }
+  return $block;
+}
+
+/**
+ * Module settings:
+ * - Which service/s to use (currently Goodreads)
+ * - API keys for each service
+ */
+function currently_reading_config_form($form, &$form_state) {
+  $goodreads_apikey = variable_get('goodreads_apikey');
+  $goodreads_userid = variable_get('goodreads_userid');
+  
+  // Build configuration form.
+  $form['goodreads_config'] = array(
+    '#title' => 'Goodreads configuration',
+    '#type' => 'fieldset',
+    
+    'goodreads_apikey' => array(
+      '#title' => t('Developer API key'),
+      '#type' => 'textfield',
+      '#description' => 'Obtained from http://www.goodreads.com/api/keys',
+      '#required' => TRUE,
+      '#default_value' => $goodreads_apikey,
+    ),
+    
+    'goodreads_userid' => array(
+      '#title' => t('User ID'),
+      '#type' => 'textfield',
+      '#description' => 'Go to your user profile on Goodreads. In a URL of the form http://www.goodreads.com/user/show/[nnnn]-[xxxx], your User ID is [nnnn].',
+      '#required' => TRUE,
+      '#default_value' => $goodreads_userid,
+    ),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Fetch the currently-reading shelf for this user on Goodreads.
+ *
+ * @param str $goodreads_apikey
+ * @param str $goodreads_userid
+ *
+ * @todo I should cache these results.
+ */
+function currently_reading_fetch_goodreads($goodreads_apikey, $goodreads_userid) {
+  $content = '';
+
+  // Fetch currently-reading shelf.
+  $url = 'http://www.goodreads.com/review/list?format=json&v=2&shelf=currently-reading&sort=date_started&order=d&id=' . $goodreads_userid . '&key=' . $goodreads_apikey;
+  $json = file_get_contents($url);
+
+  // Display book data.
+  $books = json_decode($json, true);   // Decode JSON as array.
+  foreach ($books as $book) {
+    // Get the Goodreads review widget for this book ISBN.
+    $book_url = 'http://www.goodreads.com/book/show?format=json&isbn=' . $book['isbn'] . '&key=' . $goodreads_apikey; 
+    $book_json = file_get_contents($book_url);
+    $book_review = json_decode($book_json, true);
+    $content = $content . $book_review['reviews_widget'];
+  }
+
+  return $content;
+}
