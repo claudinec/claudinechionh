@@ -717,6 +717,8 @@ function drupal_settings_initialize() {
   }
   $is_https = isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on';
 
+<<<<<<< HEAD
+=======
   // Load environmental config, if present.
   if (isset($_SERVER['PRESSFLOW_SETTINGS'])) {
     $pressflow_settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
@@ -742,6 +744,7 @@ function drupal_settings_initialize() {
     }
   }
 
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
   if (isset($base_url)) {
     // Parse fixed base URL from settings.php.
     $parts = parse_url($base_url);
@@ -2494,6 +2497,8 @@ function _drupal_bootstrap_database() {
 function _drupal_bootstrap_variables() {
   global $conf;
 
+<<<<<<< HEAD
+=======
   // Pressflow Smart Start
   if (!empty($GLOBALS['databases']) && variable_get('pressflow_smart_start', FALSE)) {
     try {
@@ -2510,6 +2515,7 @@ function _drupal_bootstrap_variables() {
     }
   }
 
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
   // Initialize the lock system.
   require_once DRUPAL_ROOT . '/' . variable_get('lock_inc', 'includes/lock.inc');
   lock_initialize();

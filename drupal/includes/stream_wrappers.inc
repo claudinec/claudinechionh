@@ -681,6 +681,8 @@ abstract class DrupalLocalStreamWrapper implements DrupalStreamWrapperInterface 
    * @see http://php.net/manual/en/streamwrapper.url-stat.php
    */
   public function url_stat($uri, $flags) {
+<<<<<<< HEAD
+=======
     // Cache existence checks for ctools_css_retrieve.
     $store_to_cache = FALSE;
     if (strpos($uri, 'public://ctools/css/') === 0 && function_exists('pantheon_cache_get')) {
@@ -691,11 +693,19 @@ abstract class DrupalLocalStreamWrapper implements DrupalStreamWrapperInterface 
       $store_to_cache = TRUE;
     }
 
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
     $this->uri = $uri;
     $path = $this->getLocalPath();
     // Suppress warnings if requested or if the file or directory does not
     // exist. This is consistent with PHP's plain filesystem stream wrapper.
     if ($flags & STREAM_URL_STAT_QUIET || !file_exists($path)) {
+<<<<<<< HEAD
+      return @stat($path);
+    }
+    else {
+      return stat($path);
+    }
+=======
       $stat = @stat($path);
     }
     else {
@@ -707,6 +717,7 @@ abstract class DrupalLocalStreamWrapper implements DrupalStreamWrapperInterface 
     }
 
     return $stat;
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
   }
 
   /**
