@@ -4936,10 +4936,13 @@ function drupal_build_js_cache($files) {
   }
 
   if (empty($uri) || !file_exists($uri)) {
-
-    // Allow modules to act on the js_cache before writing to disk.
-    drupal_alter('js_cache', $contents);
-
+    // Build aggregate JS file.
+    foreach ($files as $path => $info) {
+      if ($info['preprocess']) {
+        // Append a ';' and a newline after each JS file to prevent them from running together.
+        $contents .= file_get_contents($path) . ";\n";
+      }
+    }
     // Prefix filename to prevent blocking by firewalls which reject files
     // starting with "ad*".
     $filename = 'js_' . drupal_hash_base64($contents) . '.js';
