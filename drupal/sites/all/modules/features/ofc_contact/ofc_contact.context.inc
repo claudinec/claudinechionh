@@ -26,36 +26,18 @@ function ofc_contact_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-<<<<<<< HEAD
-        'boxes-contact_header' => array(
-          'module' => 'boxes',
-          'delta' => 'contact_header',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'boxes-phone' => array(
-          'module' => 'boxes',
-          'delta' => 'phone',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-=======
->>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
         'boxes-also_on' => array(
           'module' => 'boxes',
           'delta' => 'also_on',
           'region' => 'sidebar_second',
           'weight' => '-8',
         ),
-<<<<<<< HEAD
-=======
         'boxes-contact_header' => array(
           'module' => 'boxes',
           'delta' => 'contact_header',
           'region' => 'content',
           'weight' => '-10',
         ),
->>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
       ),
     ),
   );
