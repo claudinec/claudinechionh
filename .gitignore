@@ -1,9 +1,59 @@
+<<<<<<< HEAD
 # Logs
 logs/*
 
+=======
+# Ignore logs
+logs/*
+
+### DRUPAL ###
+
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
 # Ignore configuration files that may contain sensitive information.
 */sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
 */sites/*/files
 */sites/*/private
+<<<<<<< HEAD
+=======
+*/sites/*/tmp
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
+.sass-cache
+
+# Drupal files directory/symlink #
+##################################
+sites/default/files
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9

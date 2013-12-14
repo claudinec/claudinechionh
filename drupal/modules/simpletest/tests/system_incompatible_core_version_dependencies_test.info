@@ -10,4 +10,7 @@ dependencies[] = system_incompatible_core_version_test
 version = "7.24"
 project = "drupal"
 datestamp = "1384983240"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9

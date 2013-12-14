@@ -3558,7 +3558,11 @@ function drupal_build_css_cache($css) {
     $uri = $map[$key];
   }
 
+<<<<<<< HEAD
   if (empty($uri) || !file_exists($uri)) {
+=======
+  if (empty($uri) || !drupal_aggregated_file_exists($uri)) {
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
     // Build aggregate CSS file.
     foreach ($css as $stylesheet) {
       // Only 'file' stylesheets can be aggregated.
@@ -4896,6 +4900,22 @@ function drupal_add_tabledrag($table_id, $action, $relationship, $group, $subgro
   drupal_add_js($settings, 'setting');
 }
 
+<<<<<<< HEAD
+=======
+function drupal_aggregated_file_exists($uri) {
+  if (function_exists('apc_exists')) {
+    $exists = apc_exists('file_exists_' . $uri);
+    if (!$exists && file_exists($uri)) {
+      $exists = TRUE;
+      apc_store('file_exists_' . $uri, TRUE, 86400);
+    }
+    return $exists;
+  }
+  // If no APC available, fall back to default.
+  return file_exists($uri);
+}
+
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
 /**
  * Aggregates JavaScript files into a cache file in the files directory.
  *
@@ -4935,7 +4955,11 @@ function drupal_build_js_cache($files) {
     $uri = $map[$key];
   }
 
+<<<<<<< HEAD
   if (empty($uri) || !file_exists($uri)) {
+=======
+  if (empty($uri) || !drupal_aggregated_file_exists($uri)) {
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
     // Build aggregate JS file.
     foreach ($files as $path => $info) {
       if ($info['preprocess']) {
@@ -4943,6 +4967,13 @@ function drupal_build_js_cache($files) {
         $contents .= file_get_contents($path) . ";\n";
       }
     }
+<<<<<<< HEAD
+=======
+
+    // Allow modules to act on the js_cache before writing to disk.
+    drupal_alter('js_cache', $contents);
+
+>>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
     // Prefix filename to prevent blocking by firewalls which reject files
     // starting with "ad*".
     $filename = 'js_' . drupal_hash_base64($contents) . '.js';
