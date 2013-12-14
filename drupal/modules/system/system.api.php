@@ -747,29 +747,6 @@ function hook_js_alter(&$javascript) {
 }
 
 /**
-<<<<<<< HEAD
-=======
- * Perform necessary alterations to the concatenated JavaScript before it is
- * presented on the page.
- *
- * @param $contents
- *   A string of the concatenated JavaScript.
- *
- * @see drupal_build_js_cache()
- */
-function hook_js_cache_alter(&$contents) {
-  $header = <<<HEADER
-/**
- * Powered by Pressflow
- * http://pressflow.org
- */
-HEADER;
-
-  $contents = $header . "\n" . $contents;
-}
-
-/**
->>>>>>> 3ea0ef8baeb8693eed0b2bf547978484d60005a9
  * Registers JavaScript/CSS libraries associated with a module.
  *
  * Modules implementing this return an array of arrays. The key to each
