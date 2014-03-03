@@ -20,7 +20,6 @@ function ofc_contact_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '- [Twitter](https://twitter.com/claudinec)
-- [Facebook](https://www.facebook.com/ClaudineChionhWebDev)
 - [Google+](https://plus.google.com/116605328678906868849)
 - [LinkedIn](http://au.linkedin.com/in/claudinec/)
 ',
@@ -39,7 +38,7 @@ function ofc_contact_default_box() {
   $box->description = 'Header for contact page';
   $box->options = array(
     'body' => array(
-      'value' => 'If you are inquiring about web development or related services, please use the <a href="/form/web-development-inquiry">Web development inquiry form</a>. Otherwise, you can contact me using the form below.
+      'value' => 'You can contact me using the form below.
 ',
       'format' => '1',
     ),
