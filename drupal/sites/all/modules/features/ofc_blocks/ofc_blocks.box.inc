@@ -44,6 +44,27 @@ function ofc_blocks_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'freshdesk_widget';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Freshdesk widget';
+  $box->options = array(
+    'body' => array(
+      'value' => '<script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
+<style type="text/css" media="screen, projection">
+	@import url(http://assets.freshdesk.com/widget/freshwidget.css); 
+</style> 
+<iframe class="freshwidget-embedded-form" id="freshwidget-embedded-form" src="https://claudinechionh.freshdesk.com/widgets/feedback_widget/new?&widgetType=embedded&formTitle=Feedback+%2F+Support&screenshot=no&attachFile=no&searchArea=no" scrolling="no" height="500px" width="100%" frameborder="0" >
+</iframe>',
+      'format' => '2',
+    ),
+    'additional_classes' => '',
+  );
+  $export['freshdesk_widget'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'mge_subscription';
   $box->plugin_key = 'simple';
   $box->title = '';

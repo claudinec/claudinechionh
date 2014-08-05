@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+Security updates (2014-08-05)
+
+  - Update Google Analytics
+  - Update Date
+  - Update Core to 7.30
+
 Security updates (2013-12-31)
 
   - Updated CCK
