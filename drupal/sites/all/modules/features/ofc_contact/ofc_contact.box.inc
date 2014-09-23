@@ -58,7 +58,7 @@ function ofc_contact_default_box() {
 <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 <div id="mc_embed_signup">
 <form action="http://claudinechionh.us5.list-manage1.com/subscribe/post?u=bf44e653cda8d3bb36ae54386&amp;id=fbdc24e1c0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	<label for="mce-EMAIL">Subscribe to my newsletter</label>
+	<label for="mce-EMAIL">Subscribe to news about training and other projects</label>
 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 </form>
