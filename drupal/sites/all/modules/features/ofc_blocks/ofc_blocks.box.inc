@@ -44,6 +44,21 @@ function ofc_blocks_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'badges_nb';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Badges - NationBuilder';
+  $box->options = array(
+    'body' => array(
+      'value' => '<p><img src="http://claudinec.net/sites/default/files/images/Experts-200x200.png" alt="NationBuilder Expert" /></p>',
+      'format' => '1',
+    ),
+  );
+  $export['badges_nb'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'freshdesk_widget';
   $box->plugin_key = 'simple';
   $box->title = '';
