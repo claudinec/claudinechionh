@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+Security updates (2015-03-31)
+
+  - drupal 7.35
+  - ctools 7.x-1.7
+  - module_filter 7.x-2.0
+  - webform 7.x-4.6
+
 Security updates (2014-08-05)
 
   - Update Google Analytics
