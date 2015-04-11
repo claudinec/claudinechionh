@@ -24,9 +24,9 @@ Upgrade from 3.3 to 3.5.
 
 *** New theme based on ZURB Foundation
 
-Install zurb-foundation theme version 5.0-rc6.
-
 Install jquery update version 2.5.
+
+Install zurb-foundation theme version 5.0-rc6.
 
 ** Security updates
 <2015-03-31 Tue>
