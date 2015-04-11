@@ -18,6 +18,10 @@ Themes removed:
 - Rubik
 - Tao
 
+** Upgrade Panels module
+
+Upgrade from 3.3 to 3.5.
+
 ** Security updates
 <2015-03-31 Tue>
 
