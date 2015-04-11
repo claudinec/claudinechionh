@@ -8,7 +8,6 @@ project = ofc_blocks
 dependencies[] = boxes
 dependencies[] = context
 dependencies[] = ctools
-dependencies[] = currently_reading
 dependencies[] = views
 features[box][] = badge_conf
 features[box][] = badges
