@@ -23,6 +23,6 @@ features[field][] = node-portfolio-field_dates
 features[field][] = node-portfolio-field_portfolio_url
 features[field][] = node-portfolio-field_screenshot
 features[menu_custom][] = main-menu
-features[menu_links][] = main-menu:portfolio
 features[node][] = portfolio
 features[views_view][] = portfolio
+mtime = 1428730683
