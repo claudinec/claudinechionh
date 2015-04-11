@@ -6,7 +6,13 @@
 
 feature/2.0-cleanup
 
+Rename drupal to htdocs.
+
 Modules removed:
+- Drupad
+- Skinr
+- SMTP
+- Twitter
 
 Themes removed:
 
