@@ -1,5 +1,15 @@
 * CHANGELOG
 
+** Release 2.0
+
+*** Module and theme cleanup
+
+feature/2.0-cleanup
+
+Modules removed:
+
+Themes removed:
+
 ** Security updates
 <2015-03-31 Tue>
 
