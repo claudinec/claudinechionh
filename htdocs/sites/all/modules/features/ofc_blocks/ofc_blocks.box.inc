@@ -50,7 +50,7 @@ function ofc_blocks_default_box() {
   $box->description = 'Badges - NationBuilder';
   $box->options = array(
     'body' => array(
-      'value' => '<p><img src="http://claudinec.net/sites/default/files/images/Experts-200x200.png" alt="NationBuilder Expert" /></p>',
+      'value' => '<a href="http://nationbuilder.com/experts"><img src="http://claudinec.net/sites/default/files/images/Experts-200x200.png" alt="NationBuilder Expert" /></a>',
       'format' => '1',
     ),
   );
