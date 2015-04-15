@@ -1,5 +1,9 @@
 * CHANGELOG
 
+** Release 2.1-dev
+
+feature/2.1-theme-updates
+
 ** Release 2.0
 <2015-04-15 Wed>
 
