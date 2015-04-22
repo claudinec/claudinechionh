@@ -1,7 +1,5 @@
 // Non-modular or client styles for .l-footer region.
-.l-footer-columns {
-	background-color: $gainsboro;
-	.block-title {
-		font-size: large;
-	}
+.l-footer, .contact-footer {
+	font-size: smaller;
+	font-style: italic;
 }
