@@ -4,6 +4,11 @@
 
 feature/2.1-theme-updates
 
+** Security updates
+<2015-04-22 Wed>
+
+- Display Suite 7.x-2.8
+
 ** Release 2.0
 <2015-04-15 Wed>
 
