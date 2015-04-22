@@ -59,6 +59,22 @@ function ofc_blocks_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'contact_footer';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Contact footer';
+  $box->options = array(
+    'body' => array(
+      'value' => 'Melbourne, Australia – ABN 35892091161 – Phone +61 3 86581355',
+      'format' => '1',
+    ),
+    'additional_classes' => '',
+  );
+  $export['contact_footer'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'freshdesk_widget';
   $box->plugin_key = 'simple';
   $box->title = '';
@@ -76,36 +92,6 @@ function ofc_blocks_default_box() {
     'additional_classes' => '',
   );
   $export['freshdesk_widget'] = $box;
-
-  $box = new stdClass();
-  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
-  $box->api_version = 1;
-  $box->delta = 'mge_subscription';
-  $box->plugin_key = 'simple';
-  $box->title = '';
-  $box->description = 'Subscribe to Melbourne Green Events';
-  $box->options = array(
-    'body' => array(
-      'value' => '<!-- Begin MailChimp Signup Form -->
-<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="http://claudinec.us5.list-manage1.com/subscribe/post?u=bf44e653cda8d3bb36ae54386&amp;id=f2882f451e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	<label for="mce-EMAIL">Subscribe to Melbourne Green Events</label>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</form>
-</div>
-
-<!--End mc_embed_signup-->',
-      'format' => '2',
-    ),
-  );
-  $export['mge_subscription'] = $box;
 
   return $export;
 }
