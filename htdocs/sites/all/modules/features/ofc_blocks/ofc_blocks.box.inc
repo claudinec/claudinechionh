@@ -65,7 +65,7 @@ function ofc_blocks_default_box() {
   $box->description = 'Contact footer';
   $box->options = array(
     'body' => array(
-      'value' => 'Melbourne, Australia – ABN 35 892 091 161 – Phone +61 3 8658 1355',
+      'value' => 'Melbourne, Australia – ABN 35 892 091 161 – Phone +61 3 8658 1355 – <a href="/contact">Contact</a>',
       'format' => '1',
     ),
     'additional_classes' => '',
