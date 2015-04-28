@@ -1,5 +1,11 @@
 * CHANGELOG
 
+** Release 2.1
+<2015-04-28 Tue>
+
+feature/2.1-theme-updates:
+- Add link to contact form in footer
+
 ** Security updates
 <2015-04-22 Wed>
 
