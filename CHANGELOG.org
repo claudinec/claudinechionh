@@ -1,5 +1,12 @@
 * CHANGELOG
 
+** Security updates
+<2015-05-05 Tue>
+
+hotfix/security-20150505
+
+- Views 7.x-3.11
+
 ** Release 2.1
 <2015-04-28 Tue>
 
