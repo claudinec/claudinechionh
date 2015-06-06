@@ -21,7 +21,7 @@ feature/2.1-theme-updates:
 ## Release 2.0
 <2015-04-15 Wed>
 
-*** Module and theme cleanup
+### Module and theme cleanup
 
 feature/2.0-cleanup
 
@@ -37,17 +37,17 @@ Themes removed:
 - Rubik
 - Tao
 
-*** Upgrade Panels module
+### Upgrade Panels module
 
 Upgrade from 3.3 to 3.5.
 
-*** New theme based on ZURB Foundation
+### New theme based on ZURB Foundation
 
 Install jquery update version 2.5.
 
 Install zurb-foundation theme version 5.0-rc6.
 
-Develop =claudinec_zf_theme= on Mac (see instructions in README).
+Develop `claudinec_zf_theme` on Mac (see instructions in README).
 
 ## Security updates
 <2015-03-31 Tue>
