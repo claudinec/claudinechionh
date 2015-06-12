@@ -5,6 +5,14 @@
 - Changelog format
 - Content updates
 
+### feature/2.1-theme-updates
+
+Updates to footer style.
+
+### feature/2.1-feature-cleanup
+
+Updated and cleaned up features.
+
 ## Security updates
 <2015-05-05 Tue>
 
