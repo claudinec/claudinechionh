@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Release 2.2
+
+- Changelog format
+- Content updates
+
 ## Security updates
 <2015-05-05 Tue>
 
