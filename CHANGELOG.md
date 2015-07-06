@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Release 2.3
+
+Security updates:
+- Drupal core 7.38
+- jQuery update 7.x-2.6
+
 ## Release 2.2
 
 - Changelog format
