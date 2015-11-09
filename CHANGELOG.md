@@ -2,6 +2,8 @@
 
 ## Release 2.4
 
+Security updates:
+- Drupal core 7.41
 
 ## Release 2.3
 
