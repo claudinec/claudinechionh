@@ -5,6 +5,7 @@
 Security updates:
 - Drupal core 7.41
 - ctools 7.x-1.9
+- jQuery update 7.x-2.7
 
 ## Release 2.3
 
