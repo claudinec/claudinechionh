@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Release 2.4
+
+Security updates:
+- Drupal core 7.41
+- ctools 7.x-1.9
+- jQuery update 7.x-2.7
+- Google Analytics reports 7.x-3.0-beta2
+
 ## Release 2.3
 
 Security updates:
