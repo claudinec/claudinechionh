@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Release 2.4
+
+
 ## Release 2.3
 
 Security updates:
