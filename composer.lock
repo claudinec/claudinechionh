@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1d4035ae09f8dd064d39bf7c098ef06b",
-    "content-hash": "09b849f928acf5ba693aba771fa09a42",
+    "hash": "1d39b668fd66b59cd7f1a2d0522f537b",
+    "content-hash": "fa30b4ed21c27f5dbfff980c694507f4",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5171,7 +5171,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "drupal/migrate_upgrade": 20,
         "jcalderonzumba/gastonjs": 20,
