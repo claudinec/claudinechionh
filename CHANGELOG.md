@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Release 2.6
+- Additional webform modules for use in digital audit questionnaire
+
 ## Release 2.5
 - Change to Bootstrap theme
 - Add Front page to Block feature
