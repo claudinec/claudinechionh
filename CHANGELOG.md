@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Release 2.5
+- Change to Bootstrap theme
+- Add Front page to Block feature
+
 ## Release 2.4
 
 Security updates:
