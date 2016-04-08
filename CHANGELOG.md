@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Release 2.7 NEXT
+
+- Upgrade Drupal core to 7.43. Closes #8.
+
 ## Release 2.6
 - Additional webform modules for use in digital audit questionnaire
 
