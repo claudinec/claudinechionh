@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## Release 2.7 NEXT
+## Release 2.7 (13 Apr 2016)
 
-- Upgrade Drupal core to 7.43. Closes #8.
+- Upgrade Drupal core to 7.43. Resolves #8.
+- Add Metatag module. Resolves #7.
 
 ## Release 2.6
 - Additional webform modules for use in digital audit questionnaire
