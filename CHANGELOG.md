@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Release 2.8 (NEXT)
+
+- Security update:
+- Update front page layout: single column
+
 ## Release 2.7 (13 Apr 2016)
 
 - Upgrade Drupal core to 7.43. Resolves #8.
