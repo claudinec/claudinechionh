@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Release 2.8 (4 Jun 2016)
+
+- Security update: XML Sitemap
+- Update front page layout: single column
+- Remove "Currently Reading" dependency
+
 ## Release 2.7 (13 Apr 2016)
 
 - Upgrade Drupal core to 7.43. Resolves #8.
