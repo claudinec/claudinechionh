@@ -23,6 +23,7 @@ function ofc_blocks_context_default_contexts() {
       ),
     ),
   );
+  $context->reactions = '';
   $context->condition_mode = 0;
 
   // Translatables
