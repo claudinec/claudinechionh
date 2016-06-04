@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## Release 2.8 (NEXT)
+## Release 2.8 (4 Jun 2016)
 
-- Security update:
+- Security update: XML Sitemap
 - Update front page layout: single column
 
 ## Release 2.7 (13 Apr 2016)
