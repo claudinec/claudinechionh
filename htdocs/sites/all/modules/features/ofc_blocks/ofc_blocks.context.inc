@@ -23,18 +23,6 @@ function ofc_blocks_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'currently_reading-currently_reading' => array(
-          'module' => 'currently_reading',
-          'delta' => 'currently_reading',
-          'region' => 'tertiary_content',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
   $context->condition_mode = 0;
 
   // Translatables
