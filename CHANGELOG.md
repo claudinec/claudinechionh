@@ -3,6 +3,8 @@
 ## NEXT
 
 - Add SMTP module
+- Security update: Views
+- Security update: Core
 
 ## Release 2.8 (4 Jun 2016)
 
