@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## NEXT
+
+- Add SMTP module
+
 ## Release 2.8 (4 Jun 2016)
 
 - Security update: XML Sitemap
