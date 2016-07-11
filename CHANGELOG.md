@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## NEXT
+## Release 2.9 (11 Jul 2016 )
 
 - Add SMTP module
 - Security update: Views
