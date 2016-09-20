@@ -15,7 +15,6 @@ web/sites/default/files
 # Logs
 logs/*
 
-
 ### DRUPAL ###
 
 # Ignore configuration files that may contain sensitive information.
@@ -63,3 +62,6 @@ Thumbs.db
 # Drupal files directory/symlink #
 ##################################
 sites/default/files
+
+# Settings
+settings.php

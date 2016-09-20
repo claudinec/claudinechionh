@@ -1,7 +1,0 @@
-<VirtualHost *:80>
-     ServerAdmin webmaster@claudinechionh.net
-     ServerName dhc.claudinec.net
-     DocumentRoot /var/www/claudinechionh/htdocs/
-	 ErrorLog ${APACHE_LOG_DIR}/claudinechionh-error.log
-	 CustomLog ${APACHE_LOG_DIR}/claudinechionh-access.log combined
-</VirtualHost>
