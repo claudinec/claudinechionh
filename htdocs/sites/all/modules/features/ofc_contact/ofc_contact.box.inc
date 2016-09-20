@@ -38,7 +38,7 @@ function ofc_contact_default_box() {
   $box->description = 'Header for contact page';
   $box->options = array(
     'body' => array(
-      'value' => 'You can contact me by calling 03 8658 1355 (from Australia) or using the form below.',
+      'value' => 'You can contact me using the form below.',
       'format' => '1',
     ),
     'additional_classes' => '',
