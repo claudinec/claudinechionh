@@ -11,7 +11,7 @@ function ofc_blocks_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'front-blocks';
   $context->description = 'Blocks to display on the front page.';
@@ -33,7 +33,7 @@ function ofc_blocks_context_default_contexts() {
   $export['front-blocks'] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'mge-blocks';
   $context->description = '';
@@ -66,7 +66,7 @@ function ofc_blocks_context_default_contexts() {
   $export['mge-blocks'] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'web-development';
   $context->description = 'Blocks to display on Web Development page';
