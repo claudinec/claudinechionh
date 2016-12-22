@@ -66,11 +66,11 @@ The primary features include:
 * Certain meta tags used by Google+ may be added by enabling the "Metatag:
   Google+" submodule.
 
-* Facebook's fb:app_id and fb:admins meta tags may be added by enabling the
-  "Metatag: Facebook" submodule. These are useful for sites which are using
-  Facebook widgets or are building custom integration with Facebook's APIs,
-  but they are not needed by most sites and have no bearing on the Open Graph
-  meta tags.
+* Facebook's fb:app_id, fb:admins and fb:pages meta tags may be added by
+  enabling the "Metatag: Facebook" submodule. These are useful for sites which
+  are using Facebook widgets or are building custom integration with Facebook's
+  APIs, but they are not needed by most sites and have no bearing on the
+  Open Graph meta tags.
 
 * The App Links meta tags may be added by enabling the Metatag: App Links
   submodule.
@@ -99,6 +99,8 @@ The primary features include:
 * Support for the Feeds module for importing data from external data sources or
   file uploads.
 
+* Support for the Search API module for indexing of keywords.
+
 * Integrates with Devel_Generate, part of the Devel module, to automatically
   generate meta tags for generated nodes, via the Metatag:Devel submodule.
 
@@ -120,6 +122,9 @@ The primary features include:
 
 * An import script is provided in the Metatag:Importer submodule for D6 sites
   that used Nodewords and need to migrate the data.
+
+* If the Media module (v2) is installed, the Media WYSIWYG submodule will be
+  used to automatically filter out Media's embed codes.
 
 
 Configuration
@@ -209,6 +214,18 @@ For further details see the module's project page:
   https://www.drupal.org/project/smartling
 
 
+Search API integration
+--------------------------------------------------------------------------------
+Entity meta tag values can be made searchable using the Search API module
+(https://www.drupal.org/project/search_api).
+
+ 1. Select "Meta tags" under "Data alterations" in the filters for the
+    index:
+      admin/config/search/search_api/index/INDEX NAME/workflow
+ 2. Meta tag fields will now appear under "Fields" and can be enabled there:
+      admin/config/search/search_api/index/INDEX NAME/fields
+
+
 Fine tuning & suggestions
 --------------------------------------------------------------------------------
 * There are many options available on the settings page to control how Metatag
@@ -276,7 +293,10 @@ Troubleshooting / known issues
 * Versions of Drupal older than v7.17 were missing necessary functionality for
   taxonomy term pages to work correctly.
 * Using Metatag with values assigned for the page title and the Page Title
-  module simultaneously can cause conflicts and unexpected results.
+  module simultaneously can cause conflicts and unexpected results. It is
+  strongly recommended to convert the Page Title settings to Metatag and just
+  uninstall Page Title entirely. See https://www.drupal.org/node/2774833 for
+  further details.
 * When customizing the meta tags for user pages, it is strongly recommended to
   not use the [current-user] tokens, these pertain to the person *viewing* the
   page and not e.g., the person who authored a page.
@@ -294,6 +314,10 @@ Troubleshooting / known issues
   recommended to disable the "Force language neutral aliases" setting on the
   Admin Language settings page, i.e. set the "admin_language_force_neutral"
   variable to FALSE. Failing to do so can lead to data loss in Metatag.
+* If Entity Token is installed (a dependency for Rules, Commerce and others) it
+  is possible that the token browser may not work correctly and may either
+  timeout or give an error instead of a browsable list of tokens. This is a
+  limitation of the token browser.
 
 
 Related modules
@@ -345,7 +369,7 @@ functionality:
 * Yoast SEO
   https://www.drupal.org/project/yoast_seo
   Adds integration with the Yoast service (https://yoast.com/).
- 
+
 * Parse.ly Publishing Analytics
   https://www.drupal.org/project/parsely
   Automatically generates meta tags for the Parse.ly service.
